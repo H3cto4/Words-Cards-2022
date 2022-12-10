@@ -1,0 +1,35 @@
+{{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{texto}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+
+
+    
+<div class="col-md-5 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h1>Palabra</h1>
+        </div>
+        <div class="card-body">
+            <form action="/notes/new-note" method="POST">
+                <div class="form-group">
+                    <input type="text" name="palabra" placeholder="ingrese palabra" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="tipo" placeholder="ingrese tipo" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="significado" placeholder="ingrese significado" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+                </div>                
+            </form>
+        </div>
+    </div>
+</div>
+
